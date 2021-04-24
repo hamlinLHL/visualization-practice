@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU抽奖程序</title>
+    <style>
+        div {
+            margin: 1rem auto;
+        }
+        div, button {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+        canvas {
+            background: #000;
+        }
+        span {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div><button id="updateBtn">抽奖</button><span id="user"></span></div>
+<canvas id="glDoodle" width="512" height="512"></canvas>
+</body>
+<script src="./gl-renderer.js"></script>
+<script type="module">
+    // const container = document.getElementById('glDoodle');
+    // const doodle = new GLRenderer(container, {autoUpdate: false});
+    // doodle.render();
+</script>
+</html>

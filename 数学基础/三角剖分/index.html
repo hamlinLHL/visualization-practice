@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角剖分</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        canvas {
+            width: 600px;
+            height: 600px;
+            border: 1px solid;
+        }
+    </style>
+    <script src="https://unpkg.com/earcut@2.2.2/dist/earcut.dev.js"></script>
+</head>
+<body>
+<!--Y轴向下-->
+<canvas width="600" height="600"></canvas>
+<script id="vertexSource" type="x-shader/x-fragment">
+    // 一个属性变量，将会从缓冲中获取数据
+    attribute vec4 position;
+    uniform vec4 u_color;
+    varying vec4 vColor;
+    void main() {
+        gl_Position = position;
+        vColor = u_color;
+    }
+</script>
+<script id="fragmentSource" type="x-shader/x-fragment">
+    // 片断着色器没有默认精度，所以我们需要设置一个精度
+    // mediump是一个不错的默认值，代表“medium precision”（中等精度）
+    precision mediump float;
+    varying vec4 vColor;
+    void main()
+    {
+        gl_FragColor = vColor;
+    }
+</script>
+</body>
+<script src="./index.js" type="module"></script>
+</html>

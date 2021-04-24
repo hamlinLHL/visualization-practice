@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图案生成</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+        }
+        canvas {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        .cardList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+    <script src="https://unpkg.com/earcut@2.2.2/dist/earcut.dev.js"></script>
+</head>
+<body>
+<div class="cardList">
+    <div>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <canvas width="300" height="300"></canvas>
+    </div>
+</div>
+</body>
+<script src="./index.js" type="module"></script>
+</html>

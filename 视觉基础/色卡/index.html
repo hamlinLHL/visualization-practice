@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>色卡</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+        }
+        canvas {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        .cardList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+    <script src="https://unpkg.com/earcut@2.2.2/dist/earcut.dev.js"></script>
+</head>
+<body>
+<div class="cardList">
+    <div>
+        <h1>rgb色卡</h1>
+        <button>刷新</button>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <h1>hsl/hsv色卡</h1>
+        <button>刷新</button>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <h1>webgl/HSV色盘/半径对应饱和度</h1>
+        <canvas width="300" height="300"></canvas>
+    </div>
+    <div>
+        <h1>webgl/HSV色盘/半径对应亮度</h1>
+        <canvas width="300" height="300"></canvas>
+    </div>
+</div>
+</body>
+<script src="./index.js" type="module"></script>
+</html>
